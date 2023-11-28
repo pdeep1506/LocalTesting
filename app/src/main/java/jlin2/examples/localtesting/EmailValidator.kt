@@ -42,6 +42,7 @@ class EmailValidator : TextWatcher {
          * @return `true`  if the input is a valid email, `false` otherwise.
          */
         fun isValidEmail(email: CharSequence?): Boolean {
+            println(email != null && EMAIL_PATTERN.matcher(email).matches())
             return email != null && EMAIL_PATTERN.matcher(email).matches()
         }
     }
